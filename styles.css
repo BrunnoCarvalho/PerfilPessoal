@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--cor-texto);
+}
+
+:root {
+  --cor-primaria: #121212;
+  --cor-secundaria: #1e1e1e;
+  --fonte-principal: 'Inter', sans-serif;
+  --cor-titulo: #ffee00;
+  --cor-texto: #f8f9fa;
+
+  --height-footer-nav: 80px;
+
+  /* Fontes */
+  --font-size-titulo: 1.8rem;
+
+  --margin-titulo-conteudo: 1.5rem;
+
+  /* Ícone */
+  --icone-size: 3rem;
+}
+
+body{
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-primaria);
+    min-height: 100vh;
+}
+
+/* Menu e links*/
+#menu{
+    background-color: var(--cor-secundaria);
+    margin-bottom: 2rem;
+}
+
+nav{
+    height: var(--height-footer-nav);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav a:hover {
+    color: var(--cor-titulo);
+    transition: color 0.3s ease;
+}
+
+ul{
+    display: flex;
+}
+
+a{
+    color: var(--cor-texto);
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+/************/
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header - Perfil - Foto Perfil */
+#perfil{
+    width: 50%;
+    border: none;
+    border-radius: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--cor-secundaria);
+    align-items: center;
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+#foto-perfil{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+#info{
+    text-align: center;
+    margin: 0 5rem;
+}
+
+#nome {
+  font-size: 2.5rem;
+  background: linear-gradient(to right, #ffd700, #ff9f1c, #ffcc00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+#info h2{
+    text-align: center;
+    color: #adb5bd;
+}
+/************/
+
+.section-container{
+    background-color: var(--cor-secundaria);
+    margin: 2rem 0;
+    padding: 2rem 5rem;
+}
+
+.section-container h2{
+    color: var(--cor-titulo);
+    font-size: var(--font-size-titulo);
+    text-align: center;
+    margin-bottom: var(--margin-titulo-conteudo);
+}
+
+p {
+    font-size: 1.2rem;
+    padding: 0 0 1rem 0;
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/*Ícones para as habilidades*/
+.habilidades-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.habilidade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+    color: #f8f9fa;
+}
+
+.habilidades-container i {
+    font-size: var(--icone-size);
+    margin-bottom: 0.5rem;
+}
+/****************/
+
+/*Cards para os projetos */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 450px));
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1.5rem;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    background-color: black;
+}
+
+.card img{
+    width: 100%;
+    height: auto;
+}
+/****************/
+
+/* Aside - Contato - Redes Sociais */
+#container-contato, #container-redes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+#container-contato a{
+    font-size: 1.5rem;
+}
+
+.rede a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside h2{
+    color: var(--cor-titulo);
+    font-size: var(--font-size-titulo);
+    text-align: center;
+    margin-bottom: var(--margin-titulo-conteudo);
+}
+
+aside i{
+    font-size: var(--icone-size);
+    margin-bottom: 0.5rem;
+}
+/****************/
+
+/*Rodapé*/
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--height-footer-nav);
+    background-color: var(--cor-secundaria);
+}
+
+footer p{
+    padding: 0;
+}
+/****************/
+
+/* Media Query */
+@media (max-width: 600px){
+
+    nav{
+        height: var(--height-footer-nav);
+        height: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    ul{
+        display: block;
+    }
+
+    li{
+        list-style: none;
+        padding: 0.3rem;
+        font-size: 1.2rem;
+    }
+
+    p{
+        font-size: 1rem;
+    }
+
+    :root {
+    /* Fontes */
+        --font-size-titulo: 1.5rem;
+
+        --margin-titulo-conteudo: 1.5rem;
+
+        --icone-size: 2rem;
+    }
+
+    #container-contato a{
+        font-size: 1.2rem;
+    }
+
+    #foto-perfil{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+
+    #nome{
+        font-size: 2rem;
+    }
+
+    span{
+        font-size: 1rem;
+    }
+
+}
